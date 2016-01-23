@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   resources :beers
   resources :breweries
+
+  get '/', to: 'breweries#index'
+  get 'kaikki_bisset', to: 'beers#index'
+  get 'ratings', to: 'ratings#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'breweries#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

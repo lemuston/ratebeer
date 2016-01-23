@@ -5,10 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
+
 </head>
 <body>
 
+<body>
+<div class="navibar">
+  <%= link_to 'breweries', breweries_path %>
+  <%= link_to 'beers', beers_path %>
+</div>
+
 <%= yield %>
+
+</body>
 
 </body>
 </html>
