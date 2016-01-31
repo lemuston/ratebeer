@@ -15,6 +15,8 @@ class BeersController < ApplicationController
   # GET /beers/new
   def new
     @beer = Beer.new
+    @breweries = Brewery.all
+    @beers = Beer.all
   end
 
   # GET /beers/1/edit
@@ -25,6 +27,7 @@ class BeersController < ApplicationController
   # POST /beers.json
   def create
     @beer = Beer.new(beer_params)
+    redirect_to 'beers'
 
     respond_to do |format|
       if @beer.save
