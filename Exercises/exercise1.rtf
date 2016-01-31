@@ -1,0 +1,266 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fmodern\fcharset0 CourierNewPSMT;\f1\fmodern\fcharset0 CourierNewPS-BoldMT;}
+{\colortbl;\red255\green255\blue255;\red204\green204\blue204;\red46\green174\blue187;\red255\green97\blue209;
+\red219\green45\blue221;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \cb0 \CocoaLigature0 Last login: Sat Jan 23 12:34:18 on ttys001\
+Laura-MacBook-Air:~ laura$ cd document\
+-bash: cd: document: No such file or directory\
+Laura-MacBook-Air:~ laura$ cd documents\
+Laura-MacBook-Air:documents laura$ cd ratebeer/\
+Laura-MacBook-Air:ratebeer laura$ rails c\
+Running via Spring preloader in process 27652\
+Loading development environment (Rails 4.2.5)\
+irb(main):001:0> b.ratings << Rating.create score:15\
+SyntaxError: (irb):1: syntax error, unexpected tLABEL, expecting end-of-input\
+b.ratings << Rating.create score:15\
+                                 ^\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/console.rb:110:in `start'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/console.rb:9:in `start'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/commands_tasks.rb:68:in `console'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/commands_tasks.rb:39:in `run_command!'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands.rb:17:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'\
+	from /Users/laura/Documents/ratebeer/bin/rails:9:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `block in load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/commands/rails.rb:6:in `call'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/command_wrapper.rb:38:in `call'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:185:in `block in serve'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:156:in `fork'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:156:in `serve'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:131:in `block in run'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:125:in `loop'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:125:in `run'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application/boot.rb:18:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'\
+	from -e:1:in `<main>'irb(main):002:0> b = Beer.first\
+  
+\f1\b \cf3 Beer Load (0.6ms)
+\f0\b0 \cf2   
+\f1\b \cf4 SELECT  "beers".* FROM "beers"  ORDER BY "beers"."id" ASC LIMIT 1
+\f0\b0 \cf2 \
+=> #<Beer id: 1, name: "Iso 3", style: "Lager", brewery_id: 1, created_at: "2016-01-21 13:56:59", updated_at: "2016-01-21 13:56:59">\
+irb(main):003:0> b.ratings.create score:10\
+  
+\f1\b \cf5  (0.1ms)
+\f0\b0 \cf2   begin transaction\
+  
+\f1\b \cf3 SQL (1.0ms)
+\f0\b0 \cf2   
+\f1\b \cf4 INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)
+\f0\b0 \cf2   [["score", 10], ["beer_id", 1], ["created_at", "2016-01-23 10:41:46.927804"], ["updated_at", "2016-01-23 10:41:46.927804"]]\
+  
+\f1\b \cf5  (1.0ms)
+\f0\b0 \cf2   commit transaction\
+=> #<Rating id: 1, score: 10, beer_id: 1, created_at: "2016-01-23 10:41:46", updated_at: "2016-01-23 10:41:46">\
+irb(main):004:0> b.ratings.create score:21\
+  
+\f1\b \cf3  (0.1ms)
+\f0\b0 \cf2   
+\f1\b \cf4 begin transaction
+\f0\b0 \cf2 \
+  
+\f1\b \cf5 SQL (0.4ms)
+\f0\b0 \cf2   INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["score", 21], ["beer_id", 1], ["created_at", "2016-01-23 10:41:53.208715"], ["updated_at", "2016-01-23 10:41:53.208715"]]\
+  
+\f1\b \cf3  (8.5ms)
+\f0\b0 \cf2   
+\f1\b \cf4 commit transaction
+\f0\b0 \cf2 \
+=> #<Rating id: 2, score: 21, beer_id: 1, created_at: "2016-01-23 10:41:53", updated_at: "2016-01-23 10:41:53">\
+irb(main):005:0> b.ratings.create score:17\
+  
+\f1\b \cf5  (0.1ms)
+\f0\b0 \cf2   begin transaction\
+  
+\f1\b \cf3 SQL (0.4ms)
+\f0\b0 \cf2   
+\f1\b \cf4 INSERT INTO "ratings" ("score", "beer_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)
+\f0\b0 \cf2   [["score", 17], ["beer_id", 1], ["created_at", "2016-01-23 10:41:57.530453"], ["updated_at", "2016-01-23 10:41:57.530453"]]\
+  
+\f1\b \cf5  (9.2ms)
+\f0\b0 \cf2   commit transaction\
+=> #<Rating id: 3, score: 17, beer_id: 1, created_at: "2016-01-23 10:41:57", updated_at: "2016-01-23 10:41:57">\
+irb(main):006:0> b = Brewery.new(name:"Brew Dog", year:2007)\
+=> #<Brewery id: nil, name: "Brew Dog", year: 2007, created_at: nil, updated_at: nil>\
+irb(main):007:0> b.save\
+  
+\f1\b \cf3  (0.5ms)
+\f0\b0 \cf2   
+\f1\b \cf4 begin transaction
+\f0\b0 \cf2 \
+  
+\f1\b \cf5 SQL (0.9ms)
+\f0\b0 \cf2   INSERT INTO "breweries" ("name", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "Brew Dog"], ["year", 2007], ["created_at", "2016-01-23 10:47:17.992700"], ["updated_at", "2016-01-23 10:47:17.992700"]]\
+  
+\f1\b \cf3  (1.1ms)
+\f0\b0 \cf2   
+\f1\b \cf4 commit transaction
+\f0\b0 \cf2 \
+=> true\
+irb(main):008:0> b\
+=> #<Brewery id: 5, name: "Brew Dog", year: 2007, created_at: "2016-01-23 10:47:17", updated_at: "2016-01-23 10:47:17">\
+irb(main):009:0> brewery.all\
+NameError: undefined local variable or method `brewery' for main:Object\
+	from (irb):9\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/console.rb:110:in `start'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/console.rb:9:in `start'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/commands_tasks.rb:68:in `console'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/commands_tasks.rb:39:in `run_command!'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands.rb:17:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'\
+	from /Users/laura/Documents/ratebeer/bin/rails:9:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `block in load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/commands/rails.rb:6:in `call'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/command_wrapper.rb:38:in `call'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:185:in `block in serve'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:156:in `fork'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:156:in `serve'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:131:in `block in run'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:125:in `loop'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:125:in `run'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application/boot.rb:18:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'\
+	from -e:1:in `<main>'irb(main):010:0> Brewery.count\
+  
+\f1\b \cf5  (0.2ms)
+\f0\b0 \cf2   SELECT COUNT(*) FROM "breweries"\
+=> 4\
+irb(main):011:0> b = Brewery.fourth\
+  
+\f1\b \cf3 Brewery Load (0.3ms)
+\f0\b0 \cf2   
+\f1\b \cf4 SELECT  "breweries".* FROM "breweries"  ORDER BY "breweries"."id" ASC LIMIT 1 OFFSET 3
+\f0\b0 \cf2 \
+=> #<Brewery id: 5, name: "Brew Dog", year: 2007, created_at: "2016-01-23 10:47:17", updated_at: "2016-01-23 10:47:17">\
+irb(main):012:0> Beer.create name:"Punk IPA", style:"IPA", brewery_id:b.id\
+  
+\f1\b \cf5  (0.2ms)
+\f0\b0 \cf2   begin transaction\
+  
+\f1\b \cf3 SQL (1.5ms)
+\f0\b0 \cf2   
+\f1\b \cf4 INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)
+\f0\b0 \cf2   [["name", "Punk IPA"], ["style", "IPA"], ["brewery_id", 5], ["created_at", "2016-01-23 10:49:47.803985"], ["updated_at", "2016-01-23 10:49:47.803985"]]\
+  
+\f1\b \cf5  (1.1ms)
+\f0\b0 \cf2   commit transaction\
+=> #<Beer id: 14, name: "Punk IPA", style: "IPA", brewery_id: 5, created_at: "2016-01-23 10:49:47", updated_at: "2016-01-23 10:49:47">\
+irb(main):013:0> Beer.create name:"Nanny State", style:"low alcohol", brewery_id:b.id\
+  
+\f1\b \cf3  (0.1ms)
+\f0\b0 \cf2   
+\f1\b \cf4 begin transaction
+\f0\b0 \cf2 \
+  
+\f1\b \cf5 SQL (1.4ms)
+\f0\b0 \cf2   INSERT INTO "beers" ("name", "style", "brewery_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Nanny State"], ["style", "low alcohol"], ["brewery_id", 5], ["created_at", "2016-01-23 10:51:24.530584"], ["updated_at", "2016-01-23 10:51:24.530584"]]\
+  
+\f1\b \cf3  (1.0ms)
+\f0\b0 \cf2   
+\f1\b \cf4 commit transaction
+\f0\b0 \cf2 \
+=> #<Beer id: 15, name: "Nanny State", style: "low alcohol", brewery_id: 5, created_at: "2016-01-23 10:51:24", updated_at: "2016-01-23 10:51:24">\
+irb(main):014:0> b = brewery.third\
+NameError: undefined local variable or method `brewery' for main:Object\
+	from (irb):14\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/console.rb:110:in `start'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/console.rb:9:in `start'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/commands_tasks.rb:68:in `console'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/commands_tasks.rb:39:in `run_command!'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands.rb:17:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'\
+	from /Users/laura/Documents/ratebeer/bin/rails:9:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `block in load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/commands/rails.rb:6:in `call'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/command_wrapper.rb:38:in `call'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:185:in `block in serve'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:156:in `fork'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:156:in `serve'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:131:in `block in run'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:125:in `loop'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:125:in `run'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application/boot.rb:18:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'\
+	from -e:1:in `<main>'irb(main):015:0> b = brewery.first\
+NameError: undefined local variable or method `brewery' for main:Object\
+	from (irb):15\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/console.rb:110:in `start'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/console.rb:9:in `start'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/commands_tasks.rb:68:in `console'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands/commands_tasks.rb:39:in `run_command!'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/railties-4.2.5/lib/rails/commands.rb:17:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `block in require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:274:in `require'\
+	from /Users/laura/Documents/ratebeer/bin/rails:9:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `block in load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:240:in `load_dependency'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activesupport-4.2.5/lib/active_support/dependencies.rb:268:in `load'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/commands/rails.rb:6:in `call'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/command_wrapper.rb:38:in `call'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:185:in `block in serve'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:156:in `fork'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:156:in `serve'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:131:in `block in run'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:125:in `loop'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application.rb:125:in `run'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/spring-1.6.2/lib/spring/application/boot.rb:18:in `<top (required)>'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'\
+	from /Users/laura/.rbenv/versions/2.3.0/lib/ruby/2.3.0/rubygems/core_ext/kernel_require.rb:55:in `require'\
+	from -e:1:in `<main>'irb(main):016:0> b = Brewery.first\
+  
+\f1\b \cf5 Brewery Load (0.6ms)
+\f0\b0 \cf2   SELECT  "breweries".* FROM "breweries"  ORDER BY "breweries"."id" ASC LIMIT 1\
+=> #<Brewery id: 1, name: "Koff", year: 1897, created_at: "2016-01-21 13:56:59", updated_at: "2016-01-21 13:56:59">\
+irb(main):017:0> b = Brewery.second\
+  
+\f1\b \cf3 Brewery Load (0.6ms)
+\f0\b0 \cf2   
+\f1\b \cf4 SELECT  "breweries".* FROM "breweries"  ORDER BY "breweries"."id" ASC LIMIT 1 OFFSET 1
+\f0\b0 \cf2 \
+=> #<Brewery id: 2, name: "Malmgard", year: 2001, created_at: "2016-01-21 13:56:59", updated_at: "2016-01-21 13:56:59">\
+irb(main):018:0> b = Brewery.third\
+  
+\f1\b \cf5 Brewery Load (0.3ms)
+\f0\b0 \cf2   SELECT  "breweries".* FROM "breweries"  ORDER BY "breweries"."id" ASC LIMIT 1 OFFSET 2\
+=> #<Brewery id: 3, name: "Weihenstephaner", year: 1042, created_at: "2016-01-21 13:56:59", updated_at: "2016-01-21 13:56:59">\
+irb(main):019:0> b = Brewery.fourth\
+  
+\f1\b \cf3 Brewery Load (0.6ms)
+\f0\b0 \cf2   
+\f1\b \cf4 SELECT  "breweries".* FROM "breweries"  ORDER BY "breweries"."id" ASC LIMIT 1 OFFSET 3
+\f0\b0 \cf2 \
+=> #<Brewery id: 5, name: "Brew Dog", year: 2007, created_at: "2016-01-23 10:47:17", updated_at: "2016-01-23 10:47:17">\
+irb(main):020:0> b = Brewery.fifth\
+  
+\f1\b \cf5 Brewery Load (0.3ms)
+\f0\b0 \cf2   SELECT  "breweries".* FROM "breweries"  ORDER BY "breweries"."id" ASC LIMIT 1 OFFSET 4\
+=> nil\
+irb(main):021:0> \
+}
