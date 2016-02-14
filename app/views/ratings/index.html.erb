@@ -1,25 +1,13 @@
-<p id="notice"><%= notice %></p>
+<h2>List of ratings</h2>
 
-<h1>List of Ratings</h1>
-<p> Number of ratings: <%= @ratings.count %> </p>
+<p>
+  Number of ratings <%= @ratings.count %>
+</p>
 
-<table>
-
-
-  <tbody>
+<ul>
   <% @ratings.each do |rating| %>
-      <li> <%= rating %> </li>
+      <li> <%= rating %> <%= link_to 'delete', rating_path(rating.id), method: :delete, data: { confirm: 'Are you sure?' } %></li>
   <% end %>
-  </tbody>
-</table>
+</ul>
 
-<br>
-<p>
-
-  <%= link_to 'List of beers', beers_path %>
-</p>
-  <%= link_to 'New Brewery', new_brewery_path %>
-<p>
-  <%= link_to 'New Rating', ratings_new_path  %>
-
-</p>
+<%= link_to 'new_rating', new_rating_path %>
