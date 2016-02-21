@@ -14,7 +14,7 @@ group :production do
 end
 
 ruby '2.3.0'
-gem 'bcrypt', '~> 3.1.7'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -37,8 +37,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'simplecov', require: false
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'httparty'
+
+#Use ActiveModel has_secure_password
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -67,6 +69,7 @@ group :test do
     gem 'factory_girl'
     gem 'capybara'
     gem 'launchy'
+    gem 'webmock'
 end
 
 
