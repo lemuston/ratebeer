@@ -16,7 +16,7 @@ class BeermappingApi
   end
 
   def self.key
-    #"96ce1942872335547853a0bb3b0c24db"
+    "628209dee9a9a5b2844605c7ccee2c7c"
   end
 
   def save
