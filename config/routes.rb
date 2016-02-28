@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :memberships
+  resources :memberships
+  resources :memberships
+  resources :memberships
+  resources :beer_clubs
   resources :styles
   resources :beer_clubs
   resources :memberships
@@ -17,6 +22,10 @@ Rails.application.routes.draw do
   resources :places, only:[:index, :show]
 
   root 'breweries#index'
+
+  resources :breweries do
+    post 'toggle_activity', on: :member
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

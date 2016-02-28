@@ -69,14 +69,15 @@ group :test do
     gem 'factory_girl'
     gem 'capybara'
     gem 'launchy'
-    gem 'webmock'
+    #gem 'webmock'
+
+    gem 'bootstrap-sass'
+    group :development do
+      gem 'rails_layout'
+    end
+end
+end
 end
 
-
-
-
-    end
-
-  end
 
 
